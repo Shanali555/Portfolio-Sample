@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio_Sample</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <nav>
+            <div class="hit-btns">
+                <img src="./Images/Slogo-1.png" id="logo">
+                <div class="nav-sub">
+                    <div class="menu-box" id="menuBox">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Hire Me</a></li>
+                        </ul>
+                    </div>
+                    <div class="menubox-sub">
+                        <img src="./Images/moon.png" id="icon">
+                    </div>
+                </div>
+            </div>
+            <img src="/Images/menu.png" id="menuIcon">
+        </nav>
+        <div class="container">
+            <div class="cont-left">
+                <h1>I'm <span>Kanhio</span> Karakhtai</h1>
+                <p>This is my official portfolio website to showcase my my all works related to Web <br>Development and
+                    UI
+                    design.</p>
+            </div>
+            <div class="cont-right">
+                <img src="./Images/pattern.png" id="back-img">
+                <img src="./Images/shan.png" id="front-img">
+            </div>
+        </div>
+        <div class="dnd-final">
+            <a href="#" id="dnd-btn">Download CV</a>
+
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-square-behance"></i></a>
+                <a href="#"><i class="fa-solid fa-basketball"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "./Images/sun.png";
+            }
+            else {
+                icon.src = "./Images/moon.png";
+            }
+        }
+        // ///////////////////////////////////////////////////
+        let menuIcon = document.getElementById("menuIcon");
+        let menuBox = document.getElementById("menuBox");
+        menuIcon.onclick = function () {
+            menuBox.classList.toggle("open-menu");
+            if (menuBox.classList.contains("open-menu")) {
+                menuIcon.src = "./Images/close.png";
+            }
+            else {
+                menuIcon.src = "./Images/menu.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
